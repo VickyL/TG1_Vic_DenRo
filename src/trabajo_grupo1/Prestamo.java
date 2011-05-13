@@ -12,13 +12,15 @@ package trabajo_grupo1;
 public abstract class Prestamo {
     protected double montoprestamo;
     protected String nombrecliente;
-    protected int cuota[];
+    protected Cuota cuota[];
 
     public Prestamo(double monto, int cant){
         montoprestamo = monto;
          cuota=new Cuota[cant];
     }
 
+    public abstract double getTasaInteres();
 
+    public abstract double saldoPendiente();
 
 }
